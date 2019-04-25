@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'scala'
+    id 'idea'
+}
+
+group 'com.spark.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-core
+    compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '2.3.2'
+// https://mvnrepository.com/artifact/org.apache.spark/spark-sql
+    compile group: 'org.apache.spark', name: 'spark-sql_2.11', version: '2.3.2'
+// https://mvnrepository.com/artifact/com.databricks/spark-csv
+    compile group: 'com.databricks', name: 'spark-csv_2.11', version: '1.5.0'
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-hive
+    compile group: 'org.apache.spark', name: 'spark-hive_2.11', version: '2.3.2'
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-streaming
+    compile group: 'org.apache.spark', name: 'spark-streaming_2.11', version: '2.3.2'
+// https://mvnrepository.com/artifact/org.scalanlp/breeze
+    compile group: 'org.scalanlp', name: 'breeze_2.11', version: '0.11.2'
+
+// https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10
+    compile group: 'org.apache.spark', name: 'spark-streaming-kafka-0-10_2.11', version: '2.0.0'
+
+// https://mvnrepository.com/artifact/com.databricks/spark-avro
+    compile group: 'com.databricks', name: 'spark-avro_2.10', version: '0.1'
+// https://mvnrepository.com/artifact/com.datastax.spark/spark-cassandra-connector
+    compile group: 'com.datastax.spark', name: 'spark-cassandra-connector_2.11', version: '2.4.0'
+
+}
